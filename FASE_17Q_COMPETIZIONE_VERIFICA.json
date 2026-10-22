@@ -1,0 +1,11 @@
+{
+  "weekKey": "settimana_2026_42",
+  "firstDayBots": 500,
+  "sameDayReproducible": true,
+  "lastDayReproducible": true,
+  "differentDaysProgress": true,
+  "uniqueBotNames": 500,
+  "simulatedWhen2Real": 498,
+  "botsWhen500Real": 0,
+  "tests": "PASS"
+}

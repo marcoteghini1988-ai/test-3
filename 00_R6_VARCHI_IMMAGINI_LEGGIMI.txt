@@ -1,0 +1,34 @@
+ECLISSI STELLARE — R6: VARCHI CON IMMAGINI REALI
+
+Questa versione parte da R5, NON reimposta il gioco.
+
+File da SOSTITUIRE (sempre nella cartella src/newCombat):
+- src/newCombat/PokerCombatEffects.jsx
+- src/newCombat/pokerCombatEffects.css
+
+Nuova cartella da AGGIUNGERE integralmente:
+- public/assets/portals/ (8 immagini WebP trasparenti)
+
+NON sostituire pokerVolleyVfx.js: la R5 già contiene il profilo per 48 proiettili,
+che resta distinto dalla famiglia visiva del varco.
+
+Comportamento previsto:
+- il varco continua ad aprirsi sopra la carta che ha sparato;
+- il lato avversario usa la carta avversaria;
+- l'immagine si sceglie in base alla famiglia grafica del varco;
+- la forma del COLPO si sceglie SOLO in base all'ID dell'arma;
+- gli 8 file includono la variante tossica (attivata dai nomi/effetti tossici),
+  e la famiglia spear usa l'immagine beam.
+- le immagini sono pre-caricate quando viene importata la plancia Classic.
+
+VERIFICHE ESEGUITE:
+- 8 WebP con alpha funzionante, circa 200 KB ciascuno;
+- codice React/JSX senza errori di sintassi;
+- CSS senza errori di parsing;
+- struttura progetto: 711 import locali risolti;
+- 431 test generali: 421 superati, 10 falliti preesistenti dalla R5.
+
+NON VERIFICATO:
+- prova visiva dentro una battaglia vera su StackBlitz;
+- build Vite completa per mancanza di type definitions npm locali.
+La tavola PNG è soltanto un'anteprima statica delle immagini, non un screenshot del gioco.
